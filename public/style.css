@@ -24,6 +24,14 @@ html {
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+.birthday-slider::-webkit-scrollbar {
+  display: none;
+}
+.birthday-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 * {
   margin: 0;
   padding: 0;
