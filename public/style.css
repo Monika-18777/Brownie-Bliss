@@ -1439,6 +1439,44 @@ html {
 }
 
 @media (max-width: 600px) {
+  /* Footer Mobile Fix */
+footer {
+    overflow-x: hidden;
+}
+
+.footer-inner {
+    overflow-x: hidden;
+    padding: 0 15px;
+}
+
+.footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+}
+.btn, button {
+    white-space: nowrap;
+}
+
+.footer-col a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.footer-brand p {
+    word-break: break-word;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    word-break: break-word;
+}
+.footer-col a {
+    word-break: break-all;
+    font-size: 13px;
+}
   .header-inner {
     padding: 0 15px;
   }
