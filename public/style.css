@@ -9582,7 +9582,9 @@ html.dark .topping-price {
   background-color: #fff4ec !important;
   border: 2px solid #c89b7b !important;
   border-radius: 30px !important;
-  padding: 12px 20px !important;
+  padding: 12px 50px 12px 20px !important;
+  min-width: 220px;
+  text-align: left;
   color: #5c372c !important;
   font-size: 15px !important;
   font-weight: 600 !important;
