@@ -72,12 +72,12 @@
             style="display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 700;">Select
             Flavor</label>
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-            <button class="filter-pill active" onclick="updateBirthdayCake('Red Velvet')">Red Velvet</button>
-            <button class="filter-pill" onclick="updateBirthdayCake('Dutch Truffle')">Dutch Truffle</button>
-            <button class="filter-pill" onclick="updateBirthdayCake('Pineapple')">Pineapple</button>
-            <button class="filter-pill" onclick="updateBirthdayCake('Chocoholic')">Chocoholic</button>
-            <button class="filter-pill" onclick="updateBirthdayCake('Black Forest')">Black Forest</button>
-            <button class="filter-pill" onclick="updateBirthdayCake('Cheesecake')">Cheesecake</button>
+            <button class="filter-pill flavor-btn active" onclick="updateBirthdayCake('Red Velvet')">Red Velvet</button>
+            <button class="filter-pill flavor-btn" onclick="updateBirthdayCake('Dutch Truffle')">Dutch Truffle</button>
+            <button class="filter-pill flavor-btn" onclick="updateBirthdayCake('Pineapple')">Pineapple</button>
+            <button class="filter-pill flavor-btn" onclick="updateBirthdayCake('Chocoholic')">Chocoholic</button>
+            <button class="filter-pill flavor-btn" onclick="updateBirthdayCake('Black Forest')">Black Forest</button>
+            <button class="filter-pill flavor-btn" onclick="updateBirthdayCake('Cheesecake')">Cheesecake</button>
           </div>
         </div>
 
@@ -112,7 +112,7 @@
               850</span>
           </div>
           <button class="btn-primary" style="padding: 16px 40px;" onclick="addBirthdayToCart()">
-            Reserve Now &rarr;
+            Add to Cart
           </button>
         </div>
       </div>
@@ -141,24 +141,24 @@
   </footer>
 
   <!-- SHARED COMPONENTS -->
-  <div class="cart-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
   <aside class="cart-sidebar" id="cartSidebar">
-    <div class="cart-head">
-      <h3>Your Cart 🛒</h3>
-      <button onclick="closeCart()" class="close-btn">✕</button>
+    <div class="cart-header">
+      <span class="cart-title">Your Cart 🛒</span>
+      <button onclick="closeCart()" class="cart-close">✕</button>
     </div>
-    <div class="cart-body" id="cartBody"></div>
-    <div class="cart-foot" id="cartFoot" style="display:none">
-      <div class="cart-total-row">
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
         <span>Total</span>
-        <strong id="cartTotalDisp">₹0</strong>
+        <span class="cart-total-amt" id="cartTotal">₹0</span>
       </div>
-      <button class="btn-checkout" onclick="openCheckout()">Proceed to Order →</button>
+      <button class="whatsapp-btn" onclick="openCheckout()">Proceed to Order</button>
     </div>
   </aside>
 
   <!-- CHECKOUT MODAL -->
-  <div class="modal-overlay" id="checkoutOverlay">
+  <div class="checkout-overlay" id="checkoutOverlay">
     <div class="checkout-modal" id="checkoutModal">
       <div class="steps-bar">
         <div class="step active" id="step1ind"><span>1</span>Your Info</div>
@@ -222,7 +222,6 @@
   <!-- TOAST -->
   <div class="toast" id="toast"></div>
 
-  <script src="cart.js"></script>
   <script src="script.js"></script>
 </body>
 
