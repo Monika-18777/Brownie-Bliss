@@ -99,6 +99,7 @@ header {
   font-weight: 700;
   color: var(--color-primary);
   letter-spacing: 1px;
+  margin-bottom: 4px;
 }
 
 .logo-sub {
@@ -107,6 +108,7 @@ header {
   letter-spacing: 3px;
   color: var(--gold);
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 nav {
